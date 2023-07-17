@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "galeries",
+  "info": {
+    "singularName": "galery",
+    "pluralName": "galeries",
+    "displayName": "Galery"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

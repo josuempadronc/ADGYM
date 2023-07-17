@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "weights",
+  "info": {
+    "singularName": "weight",
+    "pluralName": "weights",
+    "displayName": "Weight"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "kg": {
+      "type": "decimal"
+    },
+    "date": {
+      "type": "date"
+    },
+    "sport_man": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sport-man.sport-man",
+      "inversedBy": "weights_id"
+    }
+  }
+}

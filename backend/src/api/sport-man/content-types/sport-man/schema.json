@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sport_men",
+  "info": {
+    "singularName": "sport-man",
+    "pluralName": "sport-men",
+    "displayName": "SportMan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "payment": {
+      "type": "integer"
+    },
+    "routine": {
+      "type": "richtext"
+    },
+    "disease": {
+      "type": "text"
+    },
+    "lesson": {
+      "type": "text"
+    },
+    "food": {
+      "type": "richtext"
+    },
+    "sport": {
+      "type": "text"
+    },
+    "metabolism": {
+      "type": "text"
+    },
+    "hours": {
+      "type": "time"
+    },
+    "trainner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::trainner.trainner",
+      "mappedBy": "sport_man_id"
+    },
+    "weights_id": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::weight.weight",
+      "mappedBy": "sport_man"
+    },
+    "profile": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::profile.profile",
+      "mappedBy": "sport_man"
+    }
+  }
+}

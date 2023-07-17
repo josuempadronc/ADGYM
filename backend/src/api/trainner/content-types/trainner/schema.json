@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trainners",
+  "info": {
+    "singularName": "trainner",
+    "pluralName": "trainners",
+    "displayName": "Trainner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "salary": {
+      "type": "decimal"
+    },
+    "hours": {
+      "type": "time"
+    },
+    "sport_man_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sport-man.sport-man",
+      "inversedBy": "trainner"
+    },
+    "profile": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::profile.profile",
+      "mappedBy": "trainner"
+    }
+  }
+}
