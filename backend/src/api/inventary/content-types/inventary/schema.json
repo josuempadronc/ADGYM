@@ -38,6 +38,12 @@
         "videos",
         "audios"
       ]
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "inventaries"
     }
   }
 }
