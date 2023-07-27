@@ -30,19 +30,20 @@
     },
     "category": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "api::category.category",
-      "inversedBy": "inventary"
+      "inversedBy": "inventaries"
     },
     "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     }
   }
 }

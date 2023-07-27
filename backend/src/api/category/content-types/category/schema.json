@@ -14,9 +14,9 @@
     "name": {
       "type": "string"
     },
-    "inventary": {
+    "inventaries": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::inventary.inventary",
       "mappedBy": "category"
     }
