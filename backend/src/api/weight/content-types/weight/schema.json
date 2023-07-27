@@ -21,7 +21,7 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::sport-man.sport-man",
-      "inversedBy": "weights_id"
+      "inversedBy": "weights"
     }
   }
 }

@@ -33,25 +33,43 @@
     "metabolism": {
       "type": "text"
     },
-    "hours": {
+    "StartTime": {
+      "type": "time"
+    },
+    "ci": {
+      "type": "biginteger"
+    },
+    "name": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "age": {
+      "type": "biginteger"
+    },
+    "phone": {
+      "type": "biginteger"
+    },
+    "phone_contact": {
+      "type": "biginteger"
+    },
+    "location": {
+      "type": "text"
+    },
+    "FinalHour": {
       "type": "time"
     },
     "trainner": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "api::trainner.trainner",
-      "mappedBy": "sport_man_id"
+      "inversedBy": "sport_men"
     },
-    "weights_id": {
+    "weights": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::weight.weight",
-      "mappedBy": "sport_man"
-    },
-    "profile": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::profile.profile",
       "mappedBy": "sport_man"
     }
   }

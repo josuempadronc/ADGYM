@@ -4,7 +4,8 @@
   "info": {
     "singularName": "trainner",
     "pluralName": "trainners",
-    "displayName": "Trainner"
+    "displayName": "Trainner",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,21 +13,39 @@
   "pluginOptions": {},
   "attributes": {
     "salary": {
-      "type": "decimal"
+      "type": "biginteger"
     },
-    "hours": {
+    "StartTime": {
       "type": "time"
     },
-    "sport_man_id": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::sport-man.sport-man",
-      "inversedBy": "trainner"
+    "ci": {
+      "type": "biginteger"
     },
-    "profile": {
+    "name": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "biginteger"
+    },
+    "phone_contact": {
+      "type": "biginteger"
+    },
+    "location": {
+      "type": "text"
+    },
+    "FinalHour": {
+      "type": "time"
+    },
+    "age": {
+      "type": "integer"
+    },
+    "sport_men": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::profile.profile",
+      "relation": "oneToMany",
+      "target": "api::sport-man.sport-man",
       "mappedBy": "trainner"
     }
   }
