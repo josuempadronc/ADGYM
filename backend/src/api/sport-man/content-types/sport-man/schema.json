@@ -60,17 +60,17 @@
     "FinalHour": {
       "type": "time"
     },
-    "trainner": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::trainner.trainner",
-      "inversedBy": "sport_men"
-    },
     "weights": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::weight.weight",
       "mappedBy": "sport_man"
+    },
+    "trainner": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::trainner.trainner",
+      "inversedBy": "sport_men"
     }
   }
 }

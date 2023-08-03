@@ -28,12 +28,6 @@
       "type": "decimal",
       "required": true
     },
-    "category": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::category.category",
-      "inversedBy": "inventaries"
-    },
     "image": {
       "type": "media",
       "multiple": true,
